@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --clr-purple: #330047;
+  --clr-ligth-purple: #695acde9;
+  --clr-dark-purple: #7038F8;
+
+  /*--------------------*/
+  --clr-gray: #e3e3e3;
+  --clr-gray-two: #333;
+  --clr-gray-three: #707070;
+  --clr-light-blue: #DEEBFF;
+  --clr-blue: #42526E;
+  --clr-blue-one: #0052CC;
+  --clr-blue-two: #0065FF;
+  --clr-white: #ffffff;
+  --clr-white-btn: #f8f8f8;
+  --clr-white-btn-two: #cecece;
+}
+
+/* -------------------------------- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex; 
+  flex-direction: column;
+  min-height: 100vh; 
+}
+  
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.App {
+  min-height: 100vh;
+}
+  
+/* ---------- ESTILOS DEL NAV ---------- */
+
+h1{
+  text-align: center;
+}
+  
+nav{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--clr-white);
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-logo {
+  max-height: 100px;
+  width: auto;
+}
+
+.navegation {
+  margin: 1rem;
+}
+
+.navegation button {
+  margin: 1rem;
+}
+
+.nav a{
+  color: var(--clr-blue);
+  text-decoration: none;
+  margin: 10px;
+  cursor: pointer;
+  align-items: center;
+}
+
+a:hover{
+  color: rgb(136, 136, 136);
+} 
+
+.blue-stripe {
+  background-color: var(--clr-light-blue);
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+/* ---------- THEME BUTTON ---------*/
+
+.theme-btn {
+  border: none;
+  background-color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/* ---------- ESTILOS DEL FOOTER ---------- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  background-color: var(--clr-light-blue);
+}
+  
+footer > img{
+  width: 200px;
+  margin: 0;
+}
+
+footer > p{
+  margin: 0;
+  padding-top: 0.7rem;
+  color: var(--clr-gray-two);
+}
+
+/* ---------- ESTILOS DEL FORMULARIO ---------- */
+
+.info {
+  height: 400px;
+}
+
+h2 {
+  text-align: center;
+}
+  
+form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.label {
+  display: grid;
+  width: 200px;
+  padding: 1.5rem 0;
+  grid-template-areas: "input";
+
+  > *{
+    grid-area: input;
+  }
+}
+
+.span{
+  transform-origin: left;
+  transition: transform .3s, color .3s;
+}
+
+.input{
+  height: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--clr-blue-two);
+  font: inherit;
+
+  &:focus + .span,
+  &:not(:placeholder-shown) + .span{
+
+    color: var(--clr-blue-one);
+    transform: translate(0, -100%) scale(.8);
+
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.submit-btn {
+  border: none;
+  font-size: 16px;
+  color: var(--clr-white);
+  padding: 8px 16px;
+  background-color: var(--clr-blue-one);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover{
+  background-color: var(--clr-blue-two);
+  transition: .3s;
+}
+
+  
+/* ---------- ESTILOS CARDS ---------- */
+
+.subtitle{
+  margin: 20px 0;
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+
+  border-radius: 25px;
+  background-color: var(--clr-white-btn);
+}
+
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: var(--clr-white);
+  padding: 3px;
+}
+
+.card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--clr-blue-one);
+}
+
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-gray-two);
+  margin: 5px 0;
+}
+
+
+.description {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--clr-gray-three);
+}
+  
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+  transition: .5s;
+}
+  
+.card-grid{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 70vw;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.favButton {
+  border: none;
+  font-size: 16px;
+  color: var(--clr-white);
+  padding: 8px 16px;
+  background-color: var(--clr-blue-one);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favButton:hover{
+  background-color: var(--clr-light-blue);
+}
+
+/* ---------- ESTILOS DE TABLA ---------- */
+
+.table-container {
+  height: 60vh;
+}
+
+table {
+  border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+}
+  
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+  
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  
+/* ---------- THEMES (? ---------- */
+
+/* Colapsanding ... */
+
+/* PROFE PERDONEME PERO ME AGARRÉ UN PEDO CON EL CSS,
+    mi idea era que el theme cambiara solo en el main
+    (que es el contenido) pero no sé qué wea hice,
+    supongo que se cambia en todos lados porque 
+    el estado lo usé en todos lados */
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  background-color: #12121296;
+  color: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
