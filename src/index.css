@@ -321,14 +321,6 @@ tr:nth-child(even) {
   
 /* ---------- THEMES (? ---------- */
 
-/* Colapsanding ... */
-
-/* PROFE PERDONEME PERO ME AGARRÉ UN PEDO CON EL CSS,
-    mi idea era que el theme cambiara solo en el main
-    (que es el contenido) pero no sé qué wea hice,
-    supongo que se cambia en todos lados porque 
-    el estado lo usé en todos lados */
-
 .light {
   background-color: #ffffff;
   color: #000000;
