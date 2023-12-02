@@ -2,10 +2,10 @@ import React from 'react'
 import Form from '../Components/Form'
 import { useContextGlobal } from '../Context/Context'
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 /* PROFE puse lo de poder cambiar el theme y tal, pero no me quedaron del 
-todo bien los estilos :C al poner el modo oscuro hay algunas cosas que yo
+todo bien los estilos o no modifiqué el theme donde realmente debería 
+ser, :C al poner el modo oscuro hay algunas cosas que yo
 las tengo seteadas en blanco (como los inputs) y al poner el modo oscuro 
 el texto se vuelve balnco también y se pierde */
 

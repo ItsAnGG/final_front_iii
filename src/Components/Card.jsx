@@ -21,7 +21,7 @@ const Card = ({ name, username, id }) => {
 
 
   return (
-    <div className="card">
+    <div className={`card ${state.theme}`}>
         <div className="card-image">
             <img src="/images/doctor.jpg" alt={name} className='card-img'/>
         </div>

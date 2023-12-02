@@ -13,7 +13,7 @@ const Navbar = () => {
   
 
   return (
-    <nav className={`nav ${state.theme}`}>
+    <nav className="nav">
       <div className="nav-container">
         <Link to="/">
           <img src="../images/logo.png.png" alt="logo-DH" className='nav-logo'/>
